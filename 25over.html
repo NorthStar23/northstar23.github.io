@@ -64,7 +64,7 @@ let app = Vue.createApp({
             async getData() {
                 const response = await fetch('tickets1.json');
                 const data = await response.json();
-                this.tickets = data.filter(ticket => ticket.actual_speed - ticket.posted_speed > 25);
+                this.tickets = data.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
         },
 
     }   
